@@ -1,0 +1,17 @@
+#%RAML 1.0 DataType
+type: object
+displayName: ExportResponse
+description: Result summary of a customer export to SFTP.
+properties:
+  fileName:
+    type: string
+    example: "customers_export_20260824.csv"
+  recordCount:
+    type: integer
+    example: 25
+  uploadedPath:
+    type: string
+    example: "/output/customers_export_20260824.csv"
+  correlationId:
+    type: string
+    example: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"

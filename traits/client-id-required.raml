@@ -1,0 +1,11 @@
+#%RAML 1.0 Trait
+usage: Apply to methods that require basic client identification headers (pre-Okta interim security).
+headers:
+  client_id:
+    type: string
+    required: true
+    description: Client identifier issued for this consuming application.
+  client_secret:
+    type: string
+    required: true
+    description: Client secret issued for this consuming application.

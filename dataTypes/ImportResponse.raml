@@ -1,0 +1,30 @@
+#%RAML 1.0 DataType
+type: object
+displayName: ImportResponse
+description: Result summary of an SFTP customer file import.
+properties:
+  fileName:
+    type: string
+    example: "customers_20260824.csv"
+  totalRecords:
+    type: integer
+    example: 10
+  successCount:
+    type: integer
+    example: 9
+  failureCount:
+    type: integer
+    example: 1
+  correlationId:
+    type: string
+    example: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+  errors:
+    type: array
+    required: false
+    items:
+      type: object
+      properties:
+        record:
+          type: string
+        reason:
+          type: string

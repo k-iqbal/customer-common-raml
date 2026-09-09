@@ -1,0 +1,17 @@
+#%RAML 1.0 DataType
+type: object
+displayName: ErrorResponse
+description: Standard error body returned by every API layer.
+properties:
+  httpStatusCode:
+    type: integer
+    example: 500
+  correlationId:
+    type: string
+    example: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+  errorType:
+    type: string
+    example: "INTERNAL_SERVER_ERROR"
+  message:
+    type: string
+    example: "An unexpected error occurred"

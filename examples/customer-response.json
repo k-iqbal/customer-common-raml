@@ -1,0 +1,10 @@
+{
+  "customerId": "003XX000004TmiR",
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "email": "jane.doe@example.com",
+  "phone": "+61 411 111 111",
+  "company": "XYZ Company",
+  "status": "Active",
+  "source": "Salesforce"
+}

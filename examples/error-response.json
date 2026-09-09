@@ -1,0 +1,6 @@
+{
+  "httpStatusCode": 404,
+  "correlationId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "errorType": "NOT_FOUND",
+  "message": "Customer with id 003XX000004TmiZ was not found"
+}

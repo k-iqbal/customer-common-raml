@@ -1,0 +1,15 @@
+#%RAML 1.0 Trait
+usage: |
+  Apply to any method that should accept a client-supplied correlation id. Response-side
+  echoing of X-Correlation-Id is handled globally in each Mule app's error/response
+  handling (Step 3+), not modeled per response code here — RAML trait parameters would
+  require a fixed responseCode at every call site, which varies per method (200/201/204)
+  and adds no contract value over documenting the behavior once, here.
+headers:
+  X-Correlation-Id:
+    description: |
+      Client-supplied correlation id. If omitted, the API generates one and returns it
+      in the X-Correlation-Id response header on every response, success or error.
+    type: string
+    required: false
+    example: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"

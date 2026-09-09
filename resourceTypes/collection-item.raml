@@ -1,0 +1,12 @@
+#%RAML 1.0 ResourceType
+usage: |
+  Apply to a single-item resource such as /customers/{customerId}. Describes structure
+  only — apply correlation-id and common-error-responses traits explicitly per method in
+  the API root RAML, for the same reason noted in collection.raml.
+description: A single <<resourcePathName|!singularize>>.
+get?:
+  description: Retrieve a single <<resourcePathName|!singularize>> by id.
+put?:
+  description: Update a single <<resourcePathName|!singularize>> by id.
+delete?:
+  description: Delete a single <<resourcePathName|!singularize>> by id.

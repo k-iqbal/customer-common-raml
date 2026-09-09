@@ -1,0 +1,35 @@
+#%RAML 1.0 DataType
+type: object
+displayName: Customer
+description: Canonical customer representation used across all API layers.
+properties:
+  customerId:
+    type: string
+    description: Unique customer identifier (Salesforce Contact Id when sourced from Salesforce).
+    example: "003XX000004TmiQ"
+  firstName:
+    type: string
+    example: "John"
+  lastName:
+    type: string
+    example: "Smith"
+  email:
+    type: string
+    example: "john.smith@example.com"
+  phone:
+    type: string
+    required: false
+    example: "+61 400 000 000"
+  company:
+    type: string
+    required: false
+    description: Associated account/company name.
+    example: "ABC Company"
+  status:
+    type: string
+    enum: [Active, Inactive]
+    default: Active
+  source:
+    type: string
+    description: System of record the data originated from.
+    example: "Salesforce"

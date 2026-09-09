@@ -1,0 +1,53 @@
+#%RAML 1.0 Trait
+usage: Apply to any method to document the standard error responses returned by the global error handler.
+responses:
+  400:
+    description: Bad Request - the request payload or parameters failed validation.
+    body:
+      application/json:
+        type: !include ../dataTypes/ErrorResponse.raml
+  401:
+    description: Unauthorized - missing or invalid credentials.
+    body:
+      application/json:
+        type: !include ../dataTypes/ErrorResponse.raml
+  402:
+    description: Payment Required - reserved for future metered/paid API usage tiers.
+    body:
+      application/json:
+        type: !include ../dataTypes/ErrorResponse.raml
+  403:
+    description: Forbidden - credentials valid but not permitted to perform this action.
+    body:
+      application/json:
+        type: !include ../dataTypes/ErrorResponse.raml
+  404:
+    description: Not Found - the requested resource does not exist.
+    body:
+      application/json:
+        type: !include ../dataTypes/ErrorResponse.raml
+  409:
+    description: Conflict - the request could not be completed due to a conflict with current state.
+    body:
+      application/json:
+        type: !include ../dataTypes/ErrorResponse.raml
+  422:
+    description: Unprocessable Entity - request was well-formed but semantically invalid.
+    body:
+      application/json:
+        type: !include ../dataTypes/ErrorResponse.raml
+  500:
+    description: Internal Server Error - an unexpected error occurred.
+    body:
+      application/json:
+        type: !include ../dataTypes/ErrorResponse.raml
+  502:
+    description: Bad Gateway - a downstream API returned an invalid response.
+    body:
+      application/json:
+        type: !include ../dataTypes/ErrorResponse.raml
+  503:
+    description: Service Unavailable - a downstream dependency (Salesforce/SFTP) is unreachable.
+    body:
+      application/json:
+        type: !include ../dataTypes/ErrorResponse.raml

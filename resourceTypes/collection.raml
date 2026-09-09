@@ -1,0 +1,12 @@
+#%RAML 1.0 ResourceType
+usage: |
+  Apply to a collection-style resource such as /customers. Describes structure only —
+  apply correlation-id and common-error-responses traits explicitly per method in the
+  API root RAML (e.g. is: [common.correlation-id, common.common-error-responses]),
+  since trait names referenced from inside an included resourceType fragment cannot
+  resolve against the including file's library context.
+description: A collection of <<resourcePathName>>.
+get?:
+  description: Retrieve a list of <<resourcePathName>>.
+post?:
+  description: Create a new <<resourcePathName|!singularize>>.

@@ -1,0 +1,7 @@
+target/
+.mule/
+.settings/
+.classpath
+.project
+*.log
+.DS_Store

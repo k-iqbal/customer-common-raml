@@ -1,0 +1,25 @@
+{
+  "total": 2,
+  "customers": [
+    {
+      "customerId": "003XX000004TmiQ",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john.smith@example.com",
+      "phone": "+61 400 000 000",
+      "company": "ABC Company",
+      "status": "Active",
+      "source": "Salesforce"
+    },
+    {
+      "customerId": "003XX000004TmiR",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "email": "jane.doe@example.com",
+      "phone": "+61 411 111 111",
+      "company": "XYZ Company",
+      "status": "Active",
+      "source": "Salesforce"
+    }
+  ]
+}

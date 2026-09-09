@@ -1,0 +1,25 @@
+#%RAML 1.0 Library
+usage: |
+  Shared RAML fragments for the customer-integration-platform: canonical data types,
+  reusable traits, and reusable resource types. Consumed by customer-exp-api,
+  customer-process-api, and customer-salesforce-sys-api via `uses:`, so every layer
+  works against the exact same Customer/error contract instead of maintaining
+  separate copies.
+
+types:
+  Customer: !include dataTypes/Customer.raml
+  CustomerRequest: !include dataTypes/CustomerRequest.raml
+  CustomerResponse: !include dataTypes/CustomerResponse.raml
+  CustomerListResponse: !include dataTypes/CustomerListResponse.raml
+  ErrorResponse: !include dataTypes/ErrorResponse.raml
+  ImportResponse: !include dataTypes/ImportResponse.raml
+  ExportResponse: !include dataTypes/ExportResponse.raml
+
+traits:
+  correlation-id: !include traits/correlation-id.raml
+  client-id-required: !include traits/client-id-required.raml
+  common-error-responses: !include traits/common-error-responses.raml
+
+resourceTypes:
+  collection: !include resourceTypes/collection.raml
+  collection-item: !include resourceTypes/collection-item.raml

@@ -1,0 +1,10 @@
+{
+  "fileName": "customers_20260824.csv",
+  "totalRecords": 10,
+  "successCount": 9,
+  "failureCount": 1,
+  "correlationId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "errors": [
+    { "record": "1005,,Lee,,0400000000,DEF Co", "reason": "Missing required field: email" }
+  ]
+}
